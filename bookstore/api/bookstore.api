@@ -1,0 +1,17 @@
+syntax = "v1"
+
+type (
+	CreateUserReq {
+		Name     string `json:"name"`
+		Password string `json:"password"`
+	}
+
+	UserResp {
+		Ok bool `json:"ok"`
+	}
+)
+
+service bookstore-api {
+	@handler createUserHandler
+	post /users/create (CreateUserReq) returns (UserResp)
+}

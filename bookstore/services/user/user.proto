@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package user;
+
+message createUserReq {
+    string name = 1;
+    string password = 2;
+}
+
+message UserResp {
+    bool ok = 1;
+}
+
+message updateUserReq{
+    string name = 1;
+}
+
+service UserService {
+    rpc createUser(createUserReq) returns(UserResp);
+    rpc updateUser(updateUserReq) returns(UserResp);
+}

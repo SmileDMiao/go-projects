@@ -1,0 +1,21 @@
+# JWT
+jwt:
+  signing-key: 'make-money'
+  expires-time: 604800
+  buffer-time: 86400
+
+# Redis
+redis:
+  db: 0
+  addr: '127.0.0.1:6379'
+  password: ''
+
+# PostgreSQL
+postgresql:
+  host: '127.0.0.1'
+  port: 5432
+  dbname: 'shadow'
+  username: 'themadeknight'
+  password: 'postgres'
+  sslmode: 'disable'
+  timezone: 'Asia/Shanghai'
